@@ -1,0 +1,90 @@
+@use "base";
+@use "header";
+@use "nav";
+@use "header_icons";
+@use "hero";
+@use "about";
+@use "projects";
+@use "contact";
+@use "footer";
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+// general styling
+
+* {
+  line-height: 1.3em;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(18, 18, 18);
+  i {
+    font-size: 2em;
+    transition: all 0.4s;
+    &:hover {
+      cursor: pointer;
+      transform: scale(0.95);
+      color: rgb(108, 108, 107);
+    }
+  }
+  ul {
+    list-style-type: none;
+    li {
+      color: #ffffff;
+    }
+  }
+  a {
+    text-decoration: none;
+    transition: all 0.4s;
+    &:link {
+      color: inherit;
+    }
+    &:visited {
+      color: inherit;
+    }
+    &:active {
+      color: inherit;
+    }
+    &:hover {
+      color: rgb(108, 108, 107);
+      transform: scale(0.95);
+    }
+  }
+  h2 {
+    color: rgb(108, 108, 107);
+    font-size: 2em;
+    padding-bottom: 0.3em;
+  }
+  h2,
+  h3 {
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 0.5em;
+    letter-spacing: 0.2;
+  }
+  button {
+    border: 1px solid rgb(108, 108, 107);
+    background: none;
+    padding: 0.4em 0.5em;
+    font: inherit;
+    font-size: 1.25em;
+    margin-top: 0.5em;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(0.95);
+      color: rgb(108, 108, 107);
+      cursor: pointer;
+    }
+  }
+  .go-down-icon {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    i {
+      font-size: 1.6em;
+    }
+  }
+}

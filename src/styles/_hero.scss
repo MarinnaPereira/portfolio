@@ -1,0 +1,31 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../images/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  background-position-x: center;
+  .headings {
+    h1,
+    h2 {
+      transition: transform 0.6s;
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+    h1 {
+      color: rgb(108, 108, 107);
+      font-weight: 600;
+      font-size: 1.8em;
+      padding-bottom: 0.5em;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2.3em;
+      color: rgb(18, 18, 18);
+    }
+  }
+}

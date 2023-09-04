@@ -1,0 +1,82 @@
+#projects {
+  background-image: url("../../images/projects-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding-block: 15vh;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.9em;
+    width: 80%;
+    margin: auto;
+    h2 {
+      align-self: flex-start;
+    }
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2em;
+      .project-card,
+      img,
+      .card-text {
+        border-radius: 4px;
+      }
+      .project-card {
+        width: 400px;
+        height: 580px;
+        position: relative;
+        box-shadow: 0px 0px 5px rgb(154, 154, 154);
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+          width: 300px;
+          height: 450px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+        }
+        .card-text {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          background-color: rgba(0, 0, 0, 0.712);
+          backdrop-filter: blur(5px);
+          color: #ffffff;
+          font-size: 1.2em;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          padding-inline: 4rem;
+          gap: 1em;
+          opacity: 0;
+          transition: opacity 0.7s;
+          &:hover {
+            opacity: 1;
+          }
+          .tech-icons {
+            display: flex;
+            gap: 0.6em;
+            i:hover {
+              transform: none;
+            }
+            .fa-html5 {
+              color: #e44e2e;
+            }
+            .fa-css3-alt {
+              color: #2b5be5;
+            }
+            .fa-git-alt {
+              color: #ea4a2f;
+            }
+          }
+        }
+      }
+    }
+  }
+}

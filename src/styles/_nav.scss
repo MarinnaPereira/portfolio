@@ -1,0 +1,49 @@
+nav {
+  .toggled-menu {
+    input#toggle,
+    .sub-menu {
+      display: none;
+    }
+    label .fa-bars {
+      color: #ffffff;
+      &:hover {
+        transform: none;
+        color: rgb(108, 108, 107);
+      }
+    }
+    input#toggle:checked + label .fa-bars {
+      color: rgb(108, 108, 107);
+    }
+    input#toggle:checked + label + ul.sub-menu {
+      display: block;
+    }
+    ul.sub-menu {
+      width: 100%;
+      position: fixed;
+      top: 10vh;
+      left: 0;
+      background-color: rgb(36, 33, 33);
+      li {
+        padding-block: 1em;
+        border-bottom: 1px solid rgb(56, 54, 54);
+        a {
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .desktop-menu {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    .toggled-menu {
+      display: none;
+    }
+    .desktop-menu {
+      display: flex;
+      gap: 2em;
+    }
+  }
+}
